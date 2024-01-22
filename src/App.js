@@ -16,11 +16,11 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <NavigationBar />
+        {/* <NavigationBar /> */}
         <Routes>
-          <Route path="/login" element={<LoginForm />} />
+          <Route path="/" element={<LoginForm />} />
           <Route
-            path="/dashboard/*"
+            path="/dashboard"
             element={<PrivateRoute element={<Dashboard />} />}
           />
         </Routes>
