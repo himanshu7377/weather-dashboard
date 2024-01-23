@@ -10,7 +10,7 @@ import UserDetails from './UserDetails';
 const Dashboard = () => {
   const { user } = useAuth();
   const [weatherData, setWeatherData] = useState(null);
-  const { theme, toggleTheme } = useTheme();
+  const { theme} = useTheme();
   
 
   useEffect(() => {
@@ -19,11 +19,12 @@ const Dashboard = () => {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${user.city}&appid=${apiKey}`;
 
     axios.get(apiUrl)
+    // Handle API reponse
       .then(response => {
         setWeatherData(response.data);
       })
       .catch(error => {
-        // Handle API error gracefully
+        // Handle API error 
         console.error('Error fetching weather data:', error);
       });
   }, [user]);
@@ -44,7 +45,7 @@ const Dashboard = () => {
       <div className="max-w-2xl mx-auto bg-gray-300 p-8 rounded-md shadow-md mt-8">
         <div className='text-center flex justify-between'>
           <h2 className="text-3xl font-semibold mb-4 text-blue-800">Weather Dashboard</h2>
-        <UserDetails user={user} />
+        <UserDetails  />
         </div>
         {weatherData ? (
           <div>

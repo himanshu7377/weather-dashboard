@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
-import { FiHome, FiLogOut, FiLogIn, FiSun, FiMoon, FiUser, FiMenu } from 'react-icons/fi';
+import { FiHome, FiLogOut, FiLogIn, FiSun, FiMoon,  FiMenu } from 'react-icons/fi';
 
 const NavigationBar = () => {
   const { user, logout, login } = useAuth();
@@ -36,7 +36,7 @@ const NavigationBar = () => {
           </>
         ) : (
           <>
-            <Link to="/" className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
+            <Link to="/" onClick={login} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
               <FiLogIn className="mr-1" />
               Login
             </Link>

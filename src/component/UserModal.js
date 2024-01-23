@@ -3,7 +3,7 @@ import React from 'react';
 
 const UserModal = ({ user, onClose }) => {
 
-    console.log(user)
+   
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center">
       <div className="bg-gray-800 bg-opacity-75 absolute top-0 left-0 w-full h-full"></div>
