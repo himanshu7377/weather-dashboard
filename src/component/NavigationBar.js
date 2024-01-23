@@ -18,7 +18,7 @@ const NavigationBar = () => {
     <nav className={`bg-${theme === 'dark' ? 'gray-800' : 'yellow-300'} p-4 flex items-center justify-between`}>
 
       <div className="flex items-center">
-        <Link to="/dashboard" className={`text-${theme === 'dark' ? 'white' : 'black'} text-lg`}>
+        <Link to="/" className={`text-${theme === 'dark' ? 'white' : 'black'} text-lg`}>
           <FiHome className="mr-2" />
           Home
         </Link>
@@ -44,7 +44,7 @@ const NavigationBar = () => {
         )}
         <button onClick={toggleTheme} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
           {theme === 'dark' ? <FiMoon className="mr-1" /> : <FiSun className="mr-1" />}
-          Toggle {theme} Mode
+           {theme} Mode
         </button>
       </div>
 
@@ -74,7 +74,7 @@ const NavigationBar = () => {
                 </>
               )}
               <button onClick={() => { setMobileMenuOpen(false); toggleTheme(); }} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
-                Toggle Dark Mode
+                 Dark Mode
               </button>
             </div>
           </div>

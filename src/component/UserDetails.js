@@ -25,7 +25,7 @@ const UserDetails = () => {
        
 
         <p className="w-full h-full items-center mt-14">
-          {user.name}
+          {user.name }
         </p>
       </div>
 
