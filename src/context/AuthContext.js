@@ -39,7 +39,7 @@ const users = [
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [error, setError] = useState('');
+ 
 
   const login = (username,password) => {
     
@@ -48,11 +48,11 @@ export const AuthProvider = ({ children }) => {
     if (authenticatedUser) {
       // If credentials are valid, set the user in the state
       setUser(authenticatedUser);
-      setError('');
+     
       return true
     } else {
       // If credentials are not valid, handle the error 
-      setError(' auth Invalid credentials. Please try again .');
+      console.log(' auth Invalid credentials. Please try again .');
       return false
     }
   };
