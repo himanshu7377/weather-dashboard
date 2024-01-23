@@ -49,14 +49,14 @@ const NavigationBar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {/* <div className="md:hidden">
+      <div className="md:hidden">
         <button onClick={handleMobileMenuToggle} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
           <FiMenu className="text-2xl" />
         </button>
         {isMobileMenuOpen && (
           <div className="fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex items-center justify-center">
             <div className="flex flex-col items-center space-y-4">
-              <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
+              <Link to="/dashboard" onClick={() => setMobileMenuOpen(false)} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
                 Home
               </Link>
               {user ? (
@@ -68,7 +68,7 @@ const NavigationBar = () => {
                 </>
               ) : (
                 <>
-                  <Link to="/login" onClick={() => setMobileMenuOpen(false)} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
+                  <Link to="/" onClick={() => setMobileMenuOpen(false)} className={`text-${theme === 'dark' ? 'white' : 'black'}`}>
                     Login
                   </Link>
                 </>
@@ -79,7 +79,7 @@ const NavigationBar = () => {
             </div>
           </div>
         )}
-      </div> */}
+      </div>
     </nav>
   );
 };

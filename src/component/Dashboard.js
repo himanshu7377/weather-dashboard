@@ -3,13 +3,15 @@ import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 import { WiThermometer, WiHumidity, WiStrongWind, WiSunrise, WiSunset, WiDaySunny, WiAlien, } from 'react-icons/wi';
-import NavigationBar from './NavigationBar';
+
 import { useTheme } from '../context/ThemeContext';
+import UserDetails from './UserDetails';
 
 const Dashboard = () => {
   const { user } = useAuth();
   const [weatherData, setWeatherData] = useState(null);
   const { theme, toggleTheme } = useTheme();
+  
 
   useEffect(() => {
     // Fetch weather data based on the user's city using OpenWeatherMap API
@@ -39,9 +41,10 @@ const Dashboard = () => {
 <div className={`min-h-screen bg-${theme === 'dark' ? 'gray-800' : 'yellow-300'}`}>
    
     <div className="min-h-screen  text-white p-4">
-      <div className="max-w-2xl mx-auto bg-black p-8 rounded-md shadow-md mt-8">
-        <div className='text-center'>
+      <div className="max-w-2xl mx-auto bg-gray-300 p-8 rounded-md shadow-md mt-8">
+        <div className='text-center flex justify-between'>
           <h2 className="text-3xl font-semibold mb-4 text-blue-800">Weather Dashboard</h2>
+        <UserDetails user={user} />
         </div>
         {weatherData ? (
           <div>

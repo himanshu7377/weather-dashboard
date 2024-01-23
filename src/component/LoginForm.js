@@ -41,6 +41,12 @@ const LoginForm = () => {
         "username": "bob_t",
         "password": "bobpass",
         "city": "San Francisco"
+      },
+      {
+        "name": "Himanshu",
+        "username": "2",
+        "password": "2",
+        "city": "Bangalore"
       }
     ];
 
